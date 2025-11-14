@@ -1,4 +1,4 @@
-import type { INamedAPIResource } from './api.types';
+import type { IListResponse, INamedAPIResource } from './api.types';
 
 export interface IPokemon {
 	id: number;
@@ -23,7 +23,7 @@ export interface IPokemon {
 	types: PokemonType[];
 }
 
-export interface IPokemonListItem extends INamedAPIResource {}
+export type TPokemonListResponse = IListResponse<INamedAPIResource>;
 
 interface PokemonAbility {
 	is_hidden: boolean;
