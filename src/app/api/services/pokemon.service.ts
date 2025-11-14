@@ -1,10 +1,10 @@
 import { ENDPOINTS } from '../../constants/server';
 import instance from '../axios.config';
-import type { IListResponse } from '../types/api.types';
+import type { IListResponse, IPaginationParams } from '../types/api.types';
 import type { IPokemon, IPokemonListItem } from '../types/pokemon.types';
 
 class PokemonService {
-	public async list(params?: any): Promise<IListResponse<IPokemonListItem>> {
+	public async list(params?: IPaginationParams): Promise<IListResponse<IPokemonListItem>> {
 		const { data } = await instance.get(ENDPOINTS.POKEMONS, {
 			params,
 		});
