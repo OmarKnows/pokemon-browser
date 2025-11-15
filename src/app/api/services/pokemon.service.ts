@@ -12,7 +12,7 @@ class PokemonService {
 		return data;
 	}
 
-	public async getById(id: number): Promise<IPokemon> {
+	public async getById(id: string): Promise<IPokemon> {
 		const { data } = await instance.get(`${ENDPOINTS.POKEMONS}/${id}`);
 
 		return data;

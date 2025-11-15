@@ -16,6 +16,6 @@ export interface IApiError {
 }
 
 export interface IPaginationParams {
-	limit?: number;
-	offset?: number;
+	limit?: string;
+	offset?: string;
 }
